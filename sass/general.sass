@@ -1,0 +1,56 @@
+// variables
+$shadow-d: 0 .5rem 1rem rgba(0,0,0,.15)
+
+@mixin social-li  
+  border-radius: 100%
+  transition: all .3s ease-out
+  width: 35px	
+  height: 35px
+  margin-left: 5px
+
+  &:hover
+      box-shadow: $shadow-d
+
+ 
+
+
+// Header
+
+header
+    
+    nav:first-child
+        box-shadow: $shadow-d
+    
+    span
+        vertical-align: bottom
+        color: darkgrey  
+
+        @media only screen and (max-width: 767px) 
+            float: left 
+    
+    @media only screen and (max-width: 767px)
+        justify-content: center
+
+
+    .social
+
+        li
+            @include social-li
+
+        li:nth-child(1)
+            background-color: grey
+
+        li:nth-child(2)
+            background-color: #4267b2
+        
+        li:nth-child(3)
+            background-color: #4ced69
+        
+        li:nth-child(4)
+            background-color: #ff0000
+            
+    a
+        color: white
+        text-align: center
+        padding: 6px!important
+        
