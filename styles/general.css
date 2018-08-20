@@ -126,6 +126,7 @@ header .carousel-inner img {
 header .carousel-caption {
   top: 30%;
   bottom: auto !important;
+  text-shadow: 3px 4px 10px black;
 }
 header .carousel-caption h3 {
   font-size: 3rem;
