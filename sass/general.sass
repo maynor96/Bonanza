@@ -1,5 +1,48 @@
 // variables
-$shadow-d: 0 .5rem 1rem rgba(0,0,0,.15)
+$shadow-d: 0 5px 10px 2px rgba(0, 0, 0, 0.16)
+
+.px-6 
+    padding-left: 7rem!important
+    padding-right: 7rem!important
+
+    @media only screen and (max-width: 767px)
+        padding-left: 0!important
+        padding-right: 0!important 
+
+
+// radio
+
+iframe.cuadroBordeado 
+    position: fixed
+    z-index: 99999
+    right: 0
+    top: 20%
+
+    @media only screen and (max-width: 767px)
+        position: fixed
+        z-index: 99999
+        right: 0
+        bottom: 0
+        width: 100%
+        top: auto
+// ***********
+
+.navbar-toggler
+    border: 1px solid white
+    
+    &:focus
+        outline: none
+@media only screen and (max-width: 767px)
+i.fas.fa-bars 
+    color: white
+    font-size: 1.4em
+
+li
+    transition: all .2s ease-out
+
+
+a
+    transition: all .2s ease-out
 
 @mixin social-li  
   border-radius: 100%
@@ -7,30 +50,44 @@ $shadow-d: 0 .5rem 1rem rgba(0,0,0,.15)
   width: 35px	
   height: 35px
   margin-left: 5px
+  
+  @media only screen and (max-width: 767px)
+    width: 25px
+    height: 25px
 
   &:hover
       box-shadow: $shadow-d
 
- 
-
+  & a:hover
+      color: azure    
 
 // Header
-
 header
     
-    nav:first-child
+    nav
         box-shadow: $shadow-d
+        border-top: 2.5px solid green
+        z-index: 1
+
+        @media only screen and (max-width: 767px)
+            justify-content: center
+
+            & .navbar-brand img
+                width: 150px
+
+        @media only screen and (max-width: 767px) and (orientation: landscape)
+                justify-content: space-between
+
+       
     
     span
         vertical-align: bottom
         color: darkgrey  
+        font-size: .9rem     
+        display: inline-block
 
         @media only screen and (max-width: 767px) 
-            float: left 
-    
-    @media only screen and (max-width: 767px)
-        justify-content: center
-
+            display: block
 
     .social
 
@@ -53,4 +110,197 @@ header
         color: white
         text-align: center
         padding: 6px!important
+
+        @media only screen and (max-width: 767px)
+            padding: 0px!important
+
+            i 
+                font-size: 13px
+    
+    // Carousel
+
+    .carousel-inner 
+        img
+            width: 100%
+            height: 100%
+
+    .carousel-caption
+        top: 30% 
+        bottom: auto!important
+        // background-color: #28a74596
+        // border-radius: 30px
+
+        h3
+            font-size: 3rem
+
+            @media only screen and (max-width: 767px)
+                font-size: 1.8rem
         
+        p
+            font-size: 25px   
+            
+            @media only screen and (max-width: 767px)
+                font-size: 14px    
+
+    .carousel .carousel-item 
+        height: 30em
+
+        @media only screen and (max-width: 767px)
+            height: 20em
+
+    .carousel .carousel-item > *:first-child 
+        background-position: 50%
+        background-repeat: no-repeat
+        background-size: cover
+        height: inherit
+ 
+
+.navbar-expand-md
+    padding: 0!important
+    text-align: center
+        
+    .navbar-nav
+       
+        li
+            padding: 10px 35px 10px 35px
+
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+                padding: 10px                
+            
+            &:hover
+                background-color: white
+                color: green
+                
+                a
+                 color: green
+            
+            @media only screen and (max-width: 767px)
+                border-bottom: 1px solid white
+            
+            a
+                color: white
+            
+        .active
+            background-color: white
+
+            a
+                color: green                    
+
+// section 1 about
+
+#about-home
+    background-color: #fafafa
+    padding-top: 5rem
+    padding-bottom: 5rem
+    box-shadow: 0 0 10px #88888861
+
+    h2
+        font-weight: 400
+
+    hr
+        border-top: 4px solid rgb(40, 167, 69)!important
+        width: 150px
+    
+    .desc-p
+        color: #777
+        font-style: italic
+
+    .container
+        p
+            text-align: justify
+            font-size: 16px   
+        
+// Section notices
+
+
+
+#notice-home
+    h2
+        font-weight: 400
+
+    hr
+        border-top: 4px solid rgb(40, 167, 69)!important
+        width: 150px
+
+
+#gallery
+    background-color: #f0f0f0
+    box-shadow: 0 0 10px #88888861
+
+    h2
+        font-weight: 400
+
+    hr
+        border-top: 4px solid rgb(40, 167, 69)!important
+        width: 150px
+
+    .row
+        margin-bottom: 10px
+
+        img
+                max-height: 300px
+   
+
+.footer-area
+    background: url(http://nscreativestudio.com/travelexpress/travelexpress/img/bg/footer.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+    a
+        color: #fff
+        font-size: 14px
+
+    .footer-top-area
+        padding-bottom: 77px
+        padding-top: 113px
+    
+        .footer-social-icon
+            li
+                display: inline-block
+                margin-right: 20px
+                padding-top: 27px
+        
+        .footer-link
+            color: #fff
+            font-size: 14px
+            transition: 0.5s
+
+            a
+                color: #fff
+                font-size: 14px
+                transition: 0.5s
+    
+    .copyright
+        color: #fff
+        font-size: 14px   
+        margin-bottom: 0!important
+        padding-bottom: 10px
+
+
+// Hemco 
+
+.jumbotron
+    margin-bottom: 0!important
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    color: white
+
+.hemco-back
+    background-image: url("http://hemco.com.ni/wp-content/uploads/bg-sobre-nosotros.jpg")
+
+.hm
+    
+    .col-md-6:nth-child(2)
+        margin: auto
+    
+    h3
+        font-weight: 700
+        font-size: 28px
+        color: green
+    
+    p
+        font-size: 17px
+
+
