@@ -55,6 +55,10 @@ header nav {
   header nav {
     justify-content: center;
   }
+  header nav .navbar-brand {
+    display: contents !important;
+    overflow: hidden;
+  }
   header nav .navbar-brand img {
     width: 150px;
   }
@@ -73,6 +77,11 @@ header span {
 @media only screen and (max-width: 767px) {
   header span {
     display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .social {
+    margin: auto;
   }
 }
 header .social li {
