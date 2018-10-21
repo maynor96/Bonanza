@@ -26,7 +26,7 @@ iframe.cuadroBordeado
         width: 100%
         top: auto
 // ***********
-
+ 
 .navbar-toggler
     border: 1px solid white
     
@@ -69,16 +69,21 @@ header
         border-top: 2.5px solid green
         z-index: 1
 
-        @media only screen and (max-width: 767px)
-            justify-content: center
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+            & .navbar-brand img
+                width: 120px
+                border-bottom: 1px solid #dadada
+                box-shadow: 0px 2px 3px -4px black
 
-            & .navbar-brand
-                display: contents!important
-                overflow: hidden            
+        @media only screen and (max-width: 767px)
+            justify-content: center        
 
 
             & .navbar-brand img
-                width: 150px
+                width: 120px
+                padding: 5px
+                border-bottom: 1px solid #dadada
+                box-shadow: 0px 2px 3px -4px black
 
         @media only screen and (max-width: 767px) and (orientation: landscape)
                 justify-content: space-between
@@ -96,8 +101,12 @@ header
 
     .social
 
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+            padding: 10px 0
+        
         @media only screen and (max-width: 767px)
             margin: auto
+            padding: 5px 0
 
         li
             @include social-li
