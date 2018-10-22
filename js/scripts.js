@@ -38,3 +38,28 @@ jQuery(document).ready(function($) {
             $('#carousel-text').html($('#slide-content-'+id).html());
     });
 });
+
+
+// Galeria de imagenes, configuracion 
+
+var Shuffle = window.Shuffle;
+
+var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
+  itemSelector: '.image-item',
+  sizer: '.my-sizer-element',
+  buffer: 1,
+});
+
+window.jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+  var input = evt.currentTarget;
+  if (input.checked) {
+    myShuffle.filter(input.value);
+  }
+});
+
+// Lightbox
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({alwaysShowClose: true});
+});
