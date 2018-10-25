@@ -263,10 +263,24 @@ header .carousel .carousel-item > *:first-child {
 }
 
 .footer-area {
-  background: url(http://nscreativestudio.com/travelexpress/travelexpress/img/bg/footer.jpg);
+  background: url(http://www.manfut.org/RAAN/DSC01874.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+.footer-area .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.64);
+  z-index: 1;
+}
+.footer-area .container {
+  position: relative;
+  z-index: 2;
 }
 .footer-area a {
   color: #fff;
@@ -295,7 +309,6 @@ header .carousel .carousel-item > *:first-child {
   color: #fff;
   font-size: 14px;
   margin-bottom: 0 !important;
-  padding-bottom: 10px;
 }
 
 .jumbotron {
@@ -304,10 +317,20 @@ header .carousel .carousel-item > *:first-child {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+  position: relative;
 }
-
-.hemco-back {
-  background-image: url("http://hemco.com.ni/wp-content/uploads/bg-sobre-nosotros.jpg");
+.jumbotron .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hm .col-md-6:nth-child(2) {
@@ -327,13 +350,10 @@ header .carousel .carousel-item > *:first-child {
   overflow: hidden;
 }
 
-/* Make vertical gutters the same as the horizontal ones */
 .image-item {
   margin-bottom: 30px;
 }
 
-/* Ensure images take up the same space when they load */
-/* https://vestride.github.io/Shuffle/images */
 .aspect {
   position: relative;
   width: 100%;
@@ -368,6 +388,36 @@ header .carousel .carousel-item > *:first-child {
   max-width: none;
   height: 100%;
   object-fit: cover;
+}
+
+.btn-group input {
+  display: none;
+}
+
+i.text-success::before {
+  color: #28a745;
+}
+
+.call-visit img {
+  max-width: 70%;
+  margin: auto;
+  background-color: white;
+  border-radius: 7px;
+  padding: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .call-visit img {
+    max-width: 100%;
+    padding-bottom: 10px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .call-visit img {
+    max-width: 55%;
+    padding-bottom: 10px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=general.css.map */
